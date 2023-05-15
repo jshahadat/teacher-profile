@@ -1,18 +1,41 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import "./QuestionBank.css"
 
 const QuestionBank = () => {
     return (
-        <div>
-            <div className='text-center'>
-                <h1>MY QUESTION BANK</h1>
-            </div>
+        <div className='back_ani' style={{ height: "100vh" }}>
+
+            <h1 className='cour text-center'><span className='spaOne'>QUESTION</span> <span className='spaTwo'>BANK</span></h1>
+            <div></div>
             <div className='flex justify-center justify-items-center mx-auto'>
                 <div className='grid lg:grid-cols-4 grid-cols-2 md:grid-cols-2 gap-4 '>
 
 
                 </div>
             </div>
+            {/* <div className='flex justify-evenly '>
+                <Link to="/generatequestion" className={({ isActive }) => isActive ? 'text-xl text-black w-2/3 text-center font-semibold border-b-4' : 'text-xl text-black w-2/3 text-center border-bgColor  border-b-4'}>
+
+                    <div className="card bg-base-100 lg:w-64 h-40 shadow-xl image-full">
+                        <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJkMEHeS1UTlpdMOLJduwFTbSMTB7L7iK3AA4utvNktnl1T7eJukkYVz4&s=10" alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title text-center"> GENERATE QUESTION</h2>
+                        </div>
+                    </div>
+
+                </Link>
+                <Link to="/createquestion" className={({ isActive }) => isActive ? 'text-xl text-black w-2/3 text-center font-semibold border-b-4' : 'text-xl text-black w-2/3 text-center border-bgColor  border-b-4'}>
+
+                    <div className="card bg-base-100 lg:w-64 h-40 shadow-xl image-full">
+                        <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJkMEHeS1UTlpdMOLJduwFTbSMTB7L7iK3AA4utvNktnl1T7eJukkYVz4&s=10" alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title text-center"> CREATE QUESTION</h2>
+                        </div>
+                    </div>
+
+                </Link>
+            </div> */}
 
 
 
@@ -21,7 +44,7 @@ const QuestionBank = () => {
 
 
 
-            <div className='flex items-center justify-around'>
+            {/* <div className='flex items-center justify-around'>
                 <NavLink to="/quizquestion" className={({ isActive }) => isActive ? 'text-xl text-black w-2/3 text-center font-semibold border-b-4' : 'text-xl text-black w-2/3 text-center border-bgColor  border-b-4 '}>
                     <div className="card bg-base-100 lg:w-64 h-40 shadow-xl image-full">
                         <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJkMEHeS1UTlpdMOLJduwFTbSMTB7L7iK3AA4utvNktnl1T7eJukkYVz4&s=10" alt="Shoes" /></figure>
@@ -52,7 +75,7 @@ const QuestionBank = () => {
                     </div>
                 </NavLink>
 
-            </div>
+            </div> */}
 
 
 
@@ -96,6 +119,57 @@ const QuestionBank = () => {
 
 
 
+            <div className='flex justify-evenly'>
+                <Link to="/generatequestion">
+
+                    <section>
+                        <div class="ca_rd" style={{ color: "hsl(357, 100%, 49%)" }}>
+                            <div class="card__border"></div>
+                            <div class="card__border-line"></div>
+                            <div class="card__inner">
+                                <div class="card__img">
+                                    <div class="img__team">
+                                        {/* <img src="https://i.pinimg.com/originals/86/30/83/863083894905bc5140b054917fe597d5.png" alt="Team: Ferrari logo" /> */}
+                                    </div>
+                                    <div class="img__athlete">
+                                        {/* <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Charles Leclerc" /> */}
+                                    </div>
+                                </div>
+                                <div class="card__text">
+                                    <div class="card__type" style={{ background: " hsl(40, 100%, 50%)" }}>DIU</div>
+                                    <h1 class="na_me text-center">GENERATE QUESTION</h1>
+                                    {/* <p class="points">36 PTS</p> */}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </Link>
+                <Link to="/createquestion">
+
+
+                    <section>
+                        <div class="ca_rd" style={{ color: "hsl(357, 100%, 49%)" }}>
+                            <div class="card__border"></div>
+                            <div class="card__border-line"></div>
+                            <div class="card__inner">
+                                <div class="card__img">
+                                    <div class="img__team">
+                                        {/* <img src="https://i.pinimg.com/originals/86/30/83/863083894905bc5140b054917fe597d5.png" alt="Team: Ferrari logo" /> */}
+                                    </div>
+                                    <div class="img__athlete">
+                                        {/* <img src="https://www.formula1.com/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png.transform/2col/image.png" alt="Charles Leclerc" /> */}
+                                    </div>
+                                </div>
+                                <div class="card__text">
+                                    <div class="card__type" style={{ background: " hsl(40, 100%, 50%)" }}>DIU</div>
+                                    <h1 class="na_me text-center">CREATE QUESTION</h1>
+                                    {/* <p class="points">36 PTS</p> */}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </Link>
+            </div >
 
 
 
@@ -103,8 +177,7 @@ const QuestionBank = () => {
 
 
 
-
-        </div>
+        </div >
     );
 };
 

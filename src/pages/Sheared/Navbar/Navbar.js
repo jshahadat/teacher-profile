@@ -37,7 +37,7 @@ const Navbar = () => {
 
 
 
-        <div className=''>
+        <div className='fixed bg-stone-200 z-50 w-full px-5 py-2 flex justify-between items-center '>
             <div className="lg:pl-20 lg:pr-20 navbar bg-stone-200 flex justify-between">
                 <div className="navbar-start">
                     <div className="dropdown rounded bg-stone-600">

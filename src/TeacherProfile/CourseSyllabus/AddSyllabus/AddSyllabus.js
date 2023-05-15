@@ -8,7 +8,7 @@ const AddSyllabus = () => {
         <div className='flex'>
             <div className='w-full'>
                 <SyllabusForm></SyllabusForm>
-                <SyllabusList></SyllabusList>
+                {/* <SyllabusList></SyllabusList> */}
 
             </div>
             <div className=' fixed'>

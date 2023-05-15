@@ -82,7 +82,7 @@ const Addprojects = () => {
                                             <div className='-mx-3 md:flex mb-6'>
 
                                                 <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">
+                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="company">
                                                         Course Title*
                                                     </label>
                                                     <input className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="text" name="courseTitle"
@@ -91,7 +91,7 @@ const Addprojects = () => {
 
 
                                                 <div className=' md:w-1/2 px-3'>
-                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">
+                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="title">
                                                         Course Code*
                                                     </label>
                                                     <input className="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="text" name="courseCode"
@@ -102,7 +102,7 @@ const Addprojects = () => {
                                             <div class="-mx-3 md:flex mb-2">
 
                                                 <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="location">
+                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="location">
                                                         Semester*
                                                     </label>
                                                     <div>
@@ -115,7 +115,7 @@ const Addprojects = () => {
                                                 </div>
 
                                                 <div class="md:w-1/2 px-3">
-                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="job-type">
+                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="job-type">
                                                         Year*
                                                     </label>
                                                     <div>
@@ -129,7 +129,7 @@ const Addprojects = () => {
 
 
                                                 <div class="md:w-1/2 px-3">
-                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">
+                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="department">
                                                         Department*
                                                     </label>
                                                     <div>
@@ -160,7 +160,7 @@ const Addprojects = () => {
                                             <div className='-mx-3 md:flex mb-6'>
 
                                                 <div className='md:w-full  px-3'>
-                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
+                                                    <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" htmlFor="application-link">
                                                         Project Idea*
                                                     </label>
                                                     <input className="w-full h-36 bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" type="text" name="projectIdea"
@@ -174,7 +174,7 @@ const Addprojects = () => {
 
 
                                             <div className='text-center'>
-                                                <input className='btn btn-primary text-center' type="submit" value="Add" />
+                                                <input className='btn btn-primary text-center w-full' type="submit" value="Add Project Idea" />
                                             </div>
 
 
@@ -192,7 +192,7 @@ const Addprojects = () => {
                                     <div class="-mx-3 md:flex mb-6">
 
                                         <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">
+                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2"htmlFor="company">
                                                 Company Name*
                                             </label>
                                             <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="company" type="text" placeholder="Tutsplus">
@@ -204,7 +204,7 @@ const Addprojects = () => {
                                         </div>
 
                                         <div class="md:w-1/2 px-3">
-                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">
+                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2"htmlFor="title">
                                                 Title*
                                             </label>
                                             <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" type="text" placeholder="Software Engineer">
@@ -214,7 +214,7 @@ const Addprojects = () => {
 
                                     <div class="-mx-3 md:flex mb-6">
                                         <div class="md:w-full px-3">
-                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
+                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2"htmlFor="application-link">
                                                 Application Link*
                                             </label>
                                             <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="application-link" type="text" placeholder="http://....">
@@ -224,7 +224,7 @@ const Addprojects = () => {
                                     <div class="-mx-3 md:flex mb-2">
 
                                         <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="location">
+                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2"htmlFor="location">
                                                 Location*
                                             </label>
                                             <div>
@@ -237,7 +237,7 @@ const Addprojects = () => {
                                         </div>
 
                                         <div class="md:w-1/2 px-3">
-                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="job-type">
+                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2"htmlFor="job-type">
                                                 Job Type*
                                             </label>
                                             <div>
@@ -250,7 +250,7 @@ const Addprojects = () => {
                                         </div>
 
                                         <div class="md:w-1/2 px-3">
-                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">
+                                            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2"htmlFor="department">
                                                 Department*
                                             </label>
                                             <div>
@@ -291,14 +291,14 @@ const Addprojects = () => {
                             </div >
                             {/* <Toaster /> */}
                         </div >
-                    </div>
+                    </div >
 
-                </div>
-            </div>
+                </div >
+            </div >
             <div className=' fixed'>
                 <SideNavbar></SideNavbar>
             </div>
-        </div>
+        </div >
     );
 };
 
