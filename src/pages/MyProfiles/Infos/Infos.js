@@ -40,7 +40,7 @@ const Infos = () => {
                         {/* <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div> */}
                     </li>
                 </Link>
-                <Link >
+                <Link to='/allquestion'>
                     <li >
                         <div class="icon"><i class="fa-solid fa-pen-field"></i></div>
                         <div class="text-lg font-bold">ALL QUESTON BANK</div>

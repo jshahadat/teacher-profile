@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import QuestionSyllabus from './QuestionSyllabus';
 import "./Syllabus.css"
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const SyllabusChapterQuestion = () => {
     const { courseTitle, courseCode, chapCode, displayName, chapterNo } = useLoaderData();
     console.log(chapCode, courseTitle, courseCode, displayName, chapterNo);
 
-
+    const { user } = useContext(AuthContext);
     const [chaptersQuestion, setChaptersQuestion] = useState([])
     // console.log(allChapters);
 
     useEffect(() => {
-        fetch(`https://assignment-twelfth-server.vercel.app/chptersquestions?chapCode=${chapCode}`, {
+        fetch(`https://assignment-twelfth-server.vercel.app/questionemail?chapCode=${chapCode}&&email=${user?.email}`, {
 
         })
             .then(res => res.json())
             .then(data => setChaptersQuestion(data))
-    }, [chapCode])
+    }, [chapCode && user?.email])
 
 
     return (

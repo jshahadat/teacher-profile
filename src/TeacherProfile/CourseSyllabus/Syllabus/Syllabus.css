@@ -102,6 +102,11 @@
     color: #fff;
 }
 
+.reddds {
+    background: #ff0057;
+    transform: translateY(0);
+}
+
 
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;600;700&display=swap");
 

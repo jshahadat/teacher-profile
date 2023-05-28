@@ -64,6 +64,10 @@ import CseThreeTwoFiveChapFour from "../../TeacherProfile/SpringMid/CSEThreeTwoF
 import CseThreeTwoFiveChapThree from "../../TeacherProfile/SpringMid/CSEThreeTwoFive/CseThreeTwoFiveChapThree";
 import CseThreeTwoFiveChapTwo from "../../TeacherProfile/SpringMid/CSEThreeTwoFive/CseThreeTwoFiveChapTwo";
 import CseThreeTwoFiveChapOne from "../../TeacherProfile/SpringMid/CSEThreeTwoFive/CseThreeTwoFiveChapOne";
+import AllQuestionSyllabus from "../../TeacherProfile/AllQuestions/AllQuestionSyllabus/AllQuestionSyllabus";
+import AllQuestionSyllabusChapter from "../../TeacherProfile/AllQuestions/AllQuestionSyllabusChapter/AllQuestionSyllabusChapter";
+import AllQuestionSyllabusChapterQuestion from "../../TeacherProfile/AllQuestions/AllQuestionSyllabusChapterQuestion/AllQuestionSyllabusChapterQuestion";
+import AddChapters from "../../TeacherProfile/AddChapters/AddChapters/AddChapters";
 
 export const routes = createBrowserRouter([
     {
@@ -429,6 +433,18 @@ export const routes = createBrowserRouter([
             }
             ,
             {
+                path: '/allquestion',
+                element: <AllQuestionSyllabus></AllQuestionSyllabus>
+
+            }
+            ,
+            {
+                path: '/addchapter',
+                element: <AddChapters></AddChapters>
+
+            }
+            ,
+            {
                 path: '/:id',
                 element: <SyllabusChapter></SyllabusChapter>,
                 loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/${params.id}`)
@@ -438,6 +454,20 @@ export const routes = createBrowserRouter([
                 path: '/chapquestion/:id',
                 element: <SyllabusChapterQuestion></SyllabusChapterQuestion>,
                 loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/chapquestion/${params.id}`)
+            }
+            ,
+            {
+                path: '/allquestionchapter/:id',
+                element: <AllQuestionSyllabusChapter></AllQuestionSyllabusChapter>,
+                loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/allquestionchapter/${params.id}`)
+            }
+            ,
+
+
+            {
+                path: '/allquestionchapquestion/:id',
+                element: <AllQuestionSyllabusChapterQuestion></AllQuestionSyllabusChapterQuestion>,
+                loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/allquestionchapquestion/${params.id}`)
             }
             ,
             {

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 import SyllabusChaptDetail from './SyllabusChaptDetail';
 import './Syllabus.css'
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const SyllabusChapter = () => {
     const { courseTitle, courseCode } = useLoaderData();
 
     const [allChapters, setAllChapters] = useState([])
+    const { user } = useContext(AuthContext)
 
     const newArray = [];
 
@@ -21,17 +23,9 @@ const SyllabusChapter = () => {
 
     console.log(newArray);
 
-    // useEffect(() => {
-    //     fetch(`https://assignment-twelfth-server.vercel.app/chpters?courseCode=${courseCode}`, {
-
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => setAllChapters(data))
-    // }, [courseCode])
-
     useEffect(() => {
         const fetchData = () => {
-            fetch(`https://assignment-twelfth-server.vercel.app/chpters?courseCode=${courseCode}`)
+            fetch(`https://assignment-twelfth-server.vercel.app/chpters?courseCode=${courseCode}&&email=${user?.email}`)
                 .then(response => response.json())
                 .then(json => {
                     const result = json.sort((chapter1, chapter2) => chapter1.chapterNo.localeCompare(chapter2.chapterNo));
@@ -43,10 +37,10 @@ const SyllabusChapter = () => {
         };
 
         fetchData();
-    }, [courseCode]);
+    }, [courseCode && user?.email]);
 
     return (
-        <div className='back_ani' style={{ height: "100vh" }}>
+        <div className='back_ani'>
 
             <section className='sectiones'>
                 <h1 class="text-shadow titlessss"> -- {courseTitle} ({courseCode}) -- </h1>
@@ -64,7 +58,31 @@ const SyllabusChapter = () => {
                         syllabusChaptDetail={syllabusChaptDetail}
                     ></SyllabusChaptDetail>)
                 }
+
+                <Link to='/addchapter'>
+                    <div className='mb-12'>
+
+                        <div >
+                            <div>
+
+                                <div class="face face1 reddds h-40 w-72 mt-28">
+                                    <div class="content">
+                                        <img alt='' className='w-28 mt-12 mx-auto' src="https://i.ibb.co/kKMQSPQ/plus-removebg-preview.png" />
+                                        <h1 className='text-center text-white text-lg font-bold mb-5'>ADD CHAPTER</h1>
+
+                                    </div>
+                                </div>
+
+                                <div class="face face2">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div></Link>
             </div>
+
 
         </div>
     );
