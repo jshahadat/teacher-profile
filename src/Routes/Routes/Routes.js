@@ -68,6 +68,14 @@ import AllQuestionSyllabus from "../../TeacherProfile/AllQuestions/AllQuestionSy
 import AllQuestionSyllabusChapter from "../../TeacherProfile/AllQuestions/AllQuestionSyllabusChapter/AllQuestionSyllabusChapter";
 import AllQuestionSyllabusChapterQuestion from "../../TeacherProfile/AllQuestions/AllQuestionSyllabusChapterQuestion/AllQuestionSyllabusChapterQuestion";
 import AddChapters from "../../TeacherProfile/AddChapters/AddChapters/AddChapters";
+import Summer from "../../TeacherProfile/Semeaster/Summer/Summer";
+import SummerCoursesChapter from "../../TeacherProfile/Semeaster/Summer/SummerCoursesChapter";
+import Spring from "../../TeacherProfile/Semeaster/Spring/Spring";
+import SpringCoursesChapter from "../../TeacherProfile/Semeaster/Spring/SpringCoursesChapter";
+import SpringOneTwo from "../../TeacherProfile/Semeaster/Spring/SpringOneTwo";
+import SpringCoursesChapterQuestions from "../../TeacherProfile/Semeaster/Spring/SpringCoursesChapterQuestions";
+import Quizes from "../../TeacherProfile/Quizes/Quizes/Quizes";
+import AddQuizQuestion from "../../TeacherProfile/Quizes/AddQuizQuestions/AddQuizQuestion";
 
 export const routes = createBrowserRouter([
     {
@@ -102,9 +110,55 @@ export const routes = createBrowserRouter([
                 element: <CreateQuestion></CreateQuestion>
             },
             {
-                path: '/quizquestion',
+                path: '/generatequizquestion',
                 element: <PrivateRoute><QuizQuestion></QuizQuestion></PrivateRoute>
             },
+            {
+                path: '/addquizquestion',
+                element: <PrivateRoute><AddQuizQuestion></AddQuizQuestion></PrivateRoute>
+            },
+            {
+                path: '/quiz',
+                element: <PrivateRoute><Quizes></Quizes></PrivateRoute>
+            },
+            {
+                path: '/summer',
+                element: <PrivateRoute><Summer></Summer></PrivateRoute>
+            },
+
+            {
+                path: '/summer/:id',
+                element: <SummerCoursesChapter></SummerCoursesChapter>,
+                loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/summer/${params.id}`)
+            },
+
+            {
+                path: '/spring',
+                element: <PrivateRoute><Spring></Spring></PrivateRoute>
+            }
+            ,
+            {
+                path: '/spring/:id',
+                element: <SpringCoursesChapter></SpringCoursesChapter>,
+                loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/spring/${params.id}`)
+            }
+            ,
+            {
+                path: '/spring/1,2/:id',
+                element: <SpringOneTwo></SpringOneTwo>,
+                loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/spring/1,2/${params.id}`)
+            }
+            ,
+
+
+            {
+                path: '/springchapquestion/:id',
+                element: <SpringCoursesChapterQuestions></SpringCoursesChapterQuestions>,
+                loader: ({ params }) => fetch(`https://assignment-twelfth-server.vercel.app/springchapquestion/${params.id}`)
+            }
+
+
+            ,
             {
                 path: '/midquestion',
                 element: <PrivateRoute><MidTermQuestion></MidTermQuestion></PrivateRoute>

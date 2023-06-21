@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import styles from './intro.module.css'
+import { Link, useNavigate } from 'react-router-dom';
 import './MainSearchBar.css'
-import SuggestSpan from './SuggestSpan';
 
 const MainSearchBar = () => {
 
@@ -188,6 +186,100 @@ const MainSearchBar = () => {
                 <div>
 
                 </div>
+            </div>
+            <div className=' flex justify-around'>
+
+                <Link to="/quiz">
+
+                    <div class="ag-format-container ml-20">
+                        <div class="ag-courses_box ml-16">
+                            <div class="ag-courses_item mx-auto">
+                                <a href="#" class="ag-courses-item_link w-80">
+                                    <div class="ag-courses-item_bg"></div>
+
+                                    <div class="ag-courses-item_title">
+                                        QUIZ
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+                <Link>
+
+                    <div class="ag-format-container ml-20">
+                        <div class="ag-courses_box ml-16 ">
+                            <div class="ag-courses_item mx-auto hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+
+                            </div>
+                            <div class="ag-courses_item">
+                                <a href="#" class="ag-courses-item_link w-80">
+                                    <div class="ag-courses-item_bg"></div>
+
+                                    <div class="ag-courses-item_title">
+                                        MID
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </Link>
+                <Link>
+
+                    <div class="ag-format-container ml-20">
+                        <div class="ag-courses_box ml-16 ">
+                            <div class="ag-courses_item mx-auto hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+                            </div>
+
+                            <div class="ag-courses_item hidden">
+
+                            </div>
+                            <div class="ag-courses_item hidden">
+
+                            </div>
+                            <div class="ag-courses_item">
+                                <a href="#" class="ag-courses-item_link w-80">
+                                    <div class="ag-courses-item_bg"></div>
+
+                                    <div class="ag-courses-item_title">
+                                        FINALE
+                                    </div>
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </Link>
             </div>
         </div>
     );

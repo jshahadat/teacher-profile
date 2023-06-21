@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Infos.css'
 
 const Infos = () => {
+
     return (
         <div className='ifos-box pb-36'>
             <ol>
-
                 <Link to="/generatequestion">
                     <li >
                         <div class="icon"><i class="fa-solid fa-list-check"></i></div>
@@ -14,6 +14,7 @@ const Infos = () => {
                         {/* <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, porro.</div> */}
                     </li>
                 </Link>
+
                 <Link to='/coursesyllabus'>  <li >
                     <div class="icon"><i class="fa-brands fa-sellsy"></i></div>
                     <div class=" text-lg font-bold">COURSE SYLLABUS</div>
